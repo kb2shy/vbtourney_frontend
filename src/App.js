@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Container } from 'semantic-ui-react';
 
 export default class App extends Component {
   render() {
     return (
-      <div>
-        My volleyball tourney front end
-      </div>
+      <Container>
+        My React App
+      </Container>
     )
   }
 }
