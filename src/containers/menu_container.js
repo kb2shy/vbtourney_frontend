@@ -10,7 +10,7 @@ export default class MenuContainer extends Component {
     return (
       <Container>
         <Segment color='green' inverted>
-          <NavBar />
+          <NavBar updateDisplay={this.props.updateDisplay}/>
         </Segment>
       </Container>
     )

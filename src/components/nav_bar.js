@@ -7,7 +7,10 @@ export default class NavBar extends Component {
     activeItem: 'home',
   }
 
-  handleItemClick = (e, { name }) => this.setState( {activeItem: name})
+  handleItemClick = (e, { name }) => {
+    this.setState( {activeItem: name});
+    this.props.updateDisplay(name)
+  }
 
   render() {
     const { activeItem } = this.state;
@@ -24,8 +27,18 @@ export default class NavBar extends Component {
           onClick={this.handleItemClick}
         />
         <Menu.Item
+          name='current games'
+          active={activeItem === 'current games'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
           name='teams'
           active={activeItem === 'teams'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          name='players'
+          active={activeItem === 'players'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
